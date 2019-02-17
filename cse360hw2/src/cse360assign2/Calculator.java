@@ -32,38 +32,49 @@ public class Calculator {
 	 * @return 0
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/**
-	 * Adds a value
+	 * Adds a given integer to the total
 	 * @param value
 	 */
 	public void add (int value) {
-		
+		total = total + value;
 	}
 	
 	/**
-	 * Subtracts a value
+	 * Subtracts a given integer from the total
 	 * @param value
 	 */
 	public void subtract (int value) {
-		
+		total = total - value;
 	}
 	
 	/**
-	 * Multiplies a value
+	 * Multiplies the total by a given value
 	 * @param value
 	 */
 	public void multiply (int value) {
-		
+		total = total*value;
 	}
 	
 	/**
-	 * Divides by value
+	 * Divides the total by a given integer (uses integer division).
+	 * If the parameter is 0, then it sets the total to zero
 	 * @param value
 	 */
 	public void divide (int value) {
+		
+		if (value != 0) {
+			
+			total = total / value;
+			
+		}else {
+			
+			total = 0;
+			
+		}
 		
 	}
 	
